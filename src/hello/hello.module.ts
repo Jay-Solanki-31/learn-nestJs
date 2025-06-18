@@ -6,6 +6,7 @@ import { HelloService } from './hello.service';
 // model have import and exort service and controller
 @Module({
   controllers: [HelloController],
-  providers: [HelloService]
+  providers: [HelloService],
+  exports:[HelloService]   // export hello service so that it cna use in other module 
 })
 export class HelloModule {}
